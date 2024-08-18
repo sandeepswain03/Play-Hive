@@ -8,7 +8,7 @@ import {
   BiLike,
   CiSearch,
   HiOutlineVideoCamera,
-  S1Menu,
+  SlMenu,
 } from "../icons.js";
 import { IoMdLogOut } from "react-icons/io";
 function Navbar() {
@@ -92,7 +92,7 @@ function Navbar() {
         {/* hamburger for smaller screens */}
         <div className="sm:hidden block">
           <div className="text-white">
-            <S1Menu size={24} onClick={() => setToggleMenu((prev) => !prev)} />
+            <SlMenu size={24} onClick={() => setToggleMenu((prev) => !prev)} />
           </div>
         </div>
 

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import { Controller } from "react-hook-form";
 import { FaCamera } from "react-icons/fa";
 

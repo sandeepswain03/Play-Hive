@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { Input, Button } from "./index.js";

@@ -1,4 +1,4 @@
-import Input from "../index.js";
+import {Input} from "../index.js";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 

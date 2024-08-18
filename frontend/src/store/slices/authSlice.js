@@ -19,7 +19,7 @@ export const createAccount = createAsyncThunk("register", async (data) => {
     formData.append("coverImage", data.coverImage[0]);
   }
   try {
-    const response = await axiosInstance.post("/users/register", formData);
+    const response = await axiosInstance.post("/user/register", formData);
     console.log(response.data);
     toast.success("Registered successfully!");
     return response.data;
@@ -31,7 +31,7 @@ export const createAccount = createAsyncThunk("register", async (data) => {
 
 export const userLogin = createAsyncThunk("login", async (data) => {
   try {
-    const response = await axiosInstance.post("/users/login", data);
+    const response = await axiosInstance.post("/user/login", data);
     return response.data.data.user;
   } catch (error) {
     toast.error(error?.response?.data?.error);
@@ -41,7 +41,7 @@ export const userLogin = createAsyncThunk("login", async (data) => {
 
 export const userLogout = createAsyncThunk("logout", async () => {
   try {
-    const response = await axiosInstance.post("/users/logout");
+    const response = await axiosInstance.post("/user/logout");
     toast.success(response.data?.message);
     return response.data;
   } catch (error) {
@@ -54,7 +54,7 @@ export const refreshAccessToken = createAsyncThunk(
   "refreshAccessToken",
   async (data) => {
     try {
-      const response = await axiosInstance.post("/users/refresh-token", data);
+      const response = await axiosInstance.post("/user/refresh-token", data);
       return response.data;
     } catch (error) {
       toast.error(error?.response?.data?.error);
@@ -63,11 +63,11 @@ export const refreshAccessToken = createAsyncThunk(
   }
 );
 
-export const changePassword = createAsyncThunk(
-  "changePassword",
+export const updatePassword = createAsyncThunk(
+  "updatePassword",
   async (data) => {
     try {
-      const response = await axiosInstance.post("/users/change-password", data);
+      const response = await axiosInstance.post("/user/update-password", data);
       toast.success(response.data?.message);
       return response.data;
     } catch (error) {
@@ -78,13 +78,13 @@ export const changePassword = createAsyncThunk(
 );
 
 export const getCurrentUser = createAsyncThunk("getCurrentUser", async () => {
-  const response = await axiosInstance.get("/users/current-user");
+  const response = await axiosInstance.get("/user/current-user");
   return response.data.data;
 });
 
 export const updateAvatar = createAsyncThunk("updateAvatar", async (avatar) => {
   try {
-    const response = await axiosInstance.patch("/users/update-avatar", avatar);
+    const response = await axiosInstance.patch("/user/update-avatar", avatar);
     toast.success("Updated details successfully!");
     return response.data.data;
   } catch (error) {
@@ -98,7 +98,7 @@ export const updateCoverImg = createAsyncThunk(
   async (coverImage) => {
     try {
       const response = await axiosInstance.patch(
-        "/users/update-coverImg",
+        "/user/update-coverImage",
         coverImage
       );
       toast.success(response.data?.message);
@@ -114,7 +114,7 @@ export const updateUserDetails = createAsyncThunk(
   "updateUserDetails",
   async (data) => {
     try {
-      const response = await axiosInstance.patch("/users/update-user", data);
+      const response = await axiosInstance.patch("/user/update-user", data);
       toast.success("Updated details successfully!");
       return response.data;
     } catch (error) {

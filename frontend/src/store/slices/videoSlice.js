@@ -78,7 +78,7 @@ export const deleteAVideo = createAsyncThunk(
   "deleteAVideo",
   async (videoId) => {
     try {
-      const response = await axiosInstance.delete(`/video/v/${videoId}`);
+      const response = await axiosInstance.delete(`/video/${videoId}`);
       toast.success(response.data?.message);
       return videoId;
     } catch (error) {
@@ -92,7 +92,7 @@ export const getVideoById = createAsyncThunk(
   "getVideoById",
   async ({ videoId }) => {
     try {
-      const response = await axiosInstance.get(`/video/v/${videoId}`);
+      const response = await axiosInstance.get(`/video/${videoId}`);
       return response.data.data;
     } catch (error) {
       toast.error(error?.response?.data?.error);

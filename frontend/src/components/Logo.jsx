@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { GiHoneycomb } from "react-icons/gi";
 import { Link } from "react-router-dom";
 

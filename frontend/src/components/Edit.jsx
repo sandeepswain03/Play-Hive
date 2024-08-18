@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 
 function Edit({ intialContent, onCancel, onSave }) {
   const [editedContent, setEditedContent] = useState(intialContent);

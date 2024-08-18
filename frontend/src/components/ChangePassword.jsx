@@ -1,9 +1,7 @@
-import React from "react";
 import { Button, Input2 } from "./index.js";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { changePassword } from "../store/slices/authSlice.js";
+import { updatePassword } from "../store/slices/authSlice.js";
 
 function ChangePassword() {
   const {
@@ -17,7 +15,7 @@ function ChangePassword() {
 
   const onSubmit = (data) => {
     dispatch(
-      changePassword({
+      updatePassword({
         oldPassword: data.oldPassword,
         newPassword: data.newPassword,
       })

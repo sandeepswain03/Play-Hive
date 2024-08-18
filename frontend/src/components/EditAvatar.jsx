@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdClose, MdOutlineCloudUpload } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { updateAvatar, updateCoverImg } from "../store/slices/authSlice.js";
-import { GetImagePreview } from "./index.js";
+import {GetImagePreview}  from "./index.js";
 
 function EditAvatar({ cover, preImage }) {
   const [isOpen, setIsOpen] = useState(false);

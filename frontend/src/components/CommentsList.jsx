@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import { Like, DeleteConfirmation, Edit } from "./index.js";
 import { timeAgo } from "../helpers/timeAgo.js";
 import { useDispatch, useSelector } from "react-redux";
