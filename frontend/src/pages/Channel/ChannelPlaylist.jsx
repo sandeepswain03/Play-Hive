@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
     createAPlaylist,
     getPlaylistsByUser,
-} from "../../store/Slices/playlistSlice";
+} from "../../store/slices/playlistSlice";
 import { Button, Input } from "../../components";
 import { useForm } from "react-hook-form";
 import { IoCloseCircleOutline } from "../../components/icons";

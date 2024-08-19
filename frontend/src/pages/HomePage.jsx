@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllVideos, makeVideosNull } from "../store/Slices/videoSlice";
+import { getAllVideos, makeVideosNull } from "../store/slices/videoSlice";
 import { VideoList, Container, InfiniteScroll } from "../components";
 import HomeSkeleton from "../skeleton/HomeSkeleton";
 
