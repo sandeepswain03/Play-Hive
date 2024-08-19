@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getLikedVideos } from "../store/Slices/likeSlice";
+import { getLikedVideos } from "../store/slices/likeSlice";
 import HomeSkeleton from "../skeleton/HomeSkeleton";
 import { Container, NoVideosFound, VideoList } from "../components";
-import { makeVideosNull } from "../store/Slices/videoSlice";
+import { makeVideosNull } from "../store/slices/videoSlice";
 
 function LikedVideos() {
     const dispatch = useDispatch();

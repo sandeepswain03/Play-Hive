@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getVideoById } from "../store/Slices/videoSlice.js";
+import { getVideoById } from "../store/slices/videoSlice";
 import {
   CommentList,
   TweetAndComment,
@@ -14,7 +14,7 @@ import {
 import {
   cleanUpComments,
   getVideoComments,
-} from "../store/slices/commentSlice.js";
+} from "../store/slices/commentSlice";
 
 function VideoDetail() {
   const dispatch = useDispatch();

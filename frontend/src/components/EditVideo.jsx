@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import Button from "./Button";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { updateAVideo, updateUploadState } from "../store/Slices/videoSlice";
+import { updateAVideo, updateUploadState } from "../store/slices/videoSlice";
 import Spinner from "./Spinner";
 import GetImagePreview from "./GetImagePreview";
 

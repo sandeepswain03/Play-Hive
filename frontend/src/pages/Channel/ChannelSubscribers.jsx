@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserChannelSubscribers } from "../../store/Slices/subscriptionSlice";
+import { getUserChannelSubscribers } from "../../store/slices/subscriptionSlice";
 import { Avatar, Button } from "../../components";
 import { Link } from "react-router-dom";
 

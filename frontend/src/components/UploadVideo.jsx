@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button, Input2, UploadingVideo } from "./index";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { publishAVideo } from "../store/Slices/videoSlice";
+import { publishAVideo } from "../store/slices/videoSlice";
 import { IoCloseCircleOutline } from "./icons";
 import GetImagePreview from "./GetImagePreview";
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserTweets } from "../../store/Slices/tweetSlice";
+import { getUserTweets } from "../../store/slices/tweetSlice";
 import { TweetAndComment, TweetsList } from "../../components";
 
 function ChannelTweets() {

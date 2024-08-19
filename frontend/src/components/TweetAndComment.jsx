@@ -2,8 +2,8 @@
 import Button from "./Button";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { createTweet } from "../store/Slices/tweetSlice";
-import { createAComment } from "../store/Slices/commentSlice";
+import { createTweet } from "../store/slices/tweetSlice";
+import { createAComment } from "../store/slices/commentSlice";
 
 function TweetAndComment({ tweet, comment, videoId }) {
     const { register, handleSubmit, setValue } = useForm();

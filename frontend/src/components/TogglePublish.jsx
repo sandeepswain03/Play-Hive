@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { togglePublishStatus } from "../store/Slices/videoSlice";
+import { togglePublishStatus } from "../store/slices/videoSlice";
 
 function TogglePublish({ videoId, isPublished }) {
     const [isChecked, setIsChecked] = useState(isPublished);

@@ -33,9 +33,9 @@ import EditPersonalInfo from "./EditPersonalInfo";
 import ChangePassword from "./ChangePassword";
 import Layout from "../Layout";
 import EditAvatar from "./EditAvatar";
-import LoginPopup from "./LoginPopup ";
+import LoginPopup from "./LoginPopup";
 import AuthLayout from "./AuthLayout";
-import InfiniteScroll from "./InfiniteScroll";
+import InfiniteScroll from "./InfinteScroll"
 import SearchForSmallScreen from "./SearchForSmallScreen";
 import GetImagePreview from "./GetImagePreview";
 
