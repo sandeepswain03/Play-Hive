@@ -12,7 +12,7 @@ import {
 } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { getChannelStats, getChannelVideos } from "../store/Slices/dashboard";
-import { deleteAVideo } from "../store/Slices/videoSlice";
+import { deleteAVideo } from "../store/slices/videoSlice";
 
 function AdminDashboard() {
     const username = useSelector((state) => state.auth.userData?.username);

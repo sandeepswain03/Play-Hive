@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getSubscribedChannels } from "../store/Slices/subscriptionSlice";
+import { getSubscribedChannels } from "../store/slices/subscriptionSlice";
 import { Link } from "react-router-dom";
 import { VideoList, Avatar } from "../components";
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NoVideosFound, VideoList } from "../../components/index";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllVideos, makeVideosNull } from "../../store/Slices/videoSlice";
+import { getAllVideos, makeVideosNull } from "../../store/slices/videoSlice";
 
 function ChannelVideos() {
     const dispatch = useDispatch();

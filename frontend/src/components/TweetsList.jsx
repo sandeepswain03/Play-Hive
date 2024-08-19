@@ -5,7 +5,7 @@ import { timeAgo } from "../helpers/timeAgo";
 import { useDispatch } from "react-redux";
 import { Like, DeleteConfirmation, Edit } from "./index";
 import { HiOutlineDotsVertical } from "./icons";
-import { deleteTweet, editTweet } from "../store/Slices/tweetSlice";
+import { deleteTweet, editTweet } from "../store/slices/tweetSlice";
 
 function TweetsList({
     tweetId,
