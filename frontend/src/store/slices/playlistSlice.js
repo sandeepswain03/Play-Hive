@@ -8,8 +8,8 @@ const initialState = {
   playlists: [],
 };
 
-export const createAPLaylist = createAsyncThunk(
-  "createAPLaylist",
+export const createAPlaylist = createAsyncThunk(
+  "createAPlaylist",
   async ({ name, description }) => {
     try {
       const response = await axiosInstance.post("/playlist", {
@@ -74,8 +74,8 @@ export const getPlaylistById = createAsyncThunk(
   }
 );
 
-export const getPlaylistByUser = createAsyncThunk(
-  "getPlaylistByUser",
+export const getPlaylistsByUser = createAsyncThunk(
+  "getPlaylistsByUser",
   async (userId) => {
     try {
       const response = await axiosInstance.get(`/playlist/user/${userId}`);
@@ -121,7 +121,7 @@ const playlistSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(createAPLaylist.pending, (state) => {
+    builder.addCase(createAPlaylist.pending, (state) => {
       state.loading = true;
     });
   },

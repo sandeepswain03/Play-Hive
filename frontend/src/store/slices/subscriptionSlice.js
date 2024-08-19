@@ -35,8 +35,8 @@ export const getUserChannelSubscribers = createAsyncThunk(
   }
 );
 
-export const getSubcribedChannels = createAsyncThunk(
-  "getSubcribedChannels",
+export const getSubscribedChannels = createAsyncThunk(
+  "getSubscribedChannels",
   async (subscriberId) => {
     try {
       const response = await axiosInstance.get(
@@ -70,10 +70,10 @@ const subscriptionsSlice = createSlice({
         state.loading = false;
         state.channelSubscribers = action.payload;
       })
-      .addCase(getSubcribedChannels.pending, (state) => {
+      .addCase(getSubscribedChannels.pending, (state) => {
         state.loading = true;
       })
-      .addCase(getSubcribedChannels.fulfilled, (state, action) => {
+      .addCase(getSubscribedChannels.fulfilled, (state, action) => {
         state.loading = false;
         state.mySubscriptions = action.payload.filter(
           (sub) => sub?.subscribedChannel?.latestVideo
