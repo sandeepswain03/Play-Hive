@@ -63,7 +63,7 @@ const getAllVideos = asyncHandler(async (req, res) => {
         { $unwind: "$ownerDetails" }
     );
 
-    const videoAggregation = await Video.aggregate(pipeline);
+    const videoAggregation = Video.aggregate(pipeline);
 
     const options = {
         page: parseInt(page, 10),
@@ -131,7 +131,7 @@ const publishAVideo = asyncHandler(async (req, res) => {
     return res
         .status(201)
         .json(
-            new apiResponse(201, "Video uploaded successfully", videoUploaded)
+            new apiResponse(201, videoUploaded, "Video uploaded successfully")
         );
 });
 
@@ -238,7 +238,7 @@ const getVideoById = asyncHandler(async (req, res) => {
         }
     ]);
 
-    if (!video) {
+    if (!video?.length) {
         throw new apiError(404, "Video not found");
     }
 
@@ -283,7 +283,7 @@ const updateVideo = asyncHandler(async (req, res) => {
 
     const thumbnailToDelete = video.thumbnail.public_id;
 
-    const thumbnailLocalPath = req.file.path;
+    const thumbnailLocalPath = req.file?.path;
 
     if (!thumbnailLocalPath) {
         throw new apiError(400, "Thumbnail is required");
@@ -317,12 +317,12 @@ const updateVideo = asyncHandler(async (req, res) => {
     }
 
     if (updatedVideo) {
-        deleteOnCloudinary(thumbnailToDelete);
+        await deleteOnCloudinary(thumbnailToDelete);
     }
 
     return res
         .status(200)
-        .json(new apiResponse(200, "Video updated successfully", updatedVideo));
+        .json(new apiResponse(200, updatedVideo, "Video updated successfully"));
 });
 
 const deleteVideo = asyncHandler(async (req, res) => {

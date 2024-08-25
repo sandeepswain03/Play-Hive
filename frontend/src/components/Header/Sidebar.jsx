@@ -8,14 +8,14 @@ import {
   TbUserCheck,
 } from "../icons.js";
 import { useNavigate, NavLink } from "react-router-dom";
-import { userSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { IoMdLogOut } from "react-icons/io";
 import { userLogout } from "../../store/slices/authSlice.js";
 
 function Sidebar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const username = userSelector((state) => state.auth.userData?.username);
+  const username = useSelector((state) => state.auth.userData?.username);
   const sidebarTopItems = [
     {
       icon: <RiHome6Line size={25} />,
