@@ -14,8 +14,6 @@ import {
 } from "../controllers/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
 import verifyJWT from "../middlewares/auth.middleware.js";
-import accessTokenExpiry from "../middlewares/accessTokenExpiry.middleware.js";
-import refreshTokenExpiry from "../middlewares/refreshTokenExpiry.middleware.js";
 
 const router = Router();
 router.route("/register").post(
